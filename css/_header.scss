@@ -1,0 +1,76 @@
+@import "./variables";
+
+.header {
+    grid-area: header;
+    height: 116px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: $background-color;
+    display: grid;
+    grid-template-columns: minmax(16px, auto) minmax(288px, 1120px) minmax(16px, auto);
+    grid-template-areas: '. nav .';
+
+    .nav {
+        grid-area: nav;
+        @include flex-center();
+        justify-content: space-between;
+    }
+
+    ul {
+        @include text-styles(10px, 12.19px, 600, $base-color);
+        @include nav-flex();
+        text-transform: uppercase;
+        list-style: none;
+
+        .active {
+            @include text-styles(10px, 12.19px, 700, $base-black-color);
+        }
+
+        a:hover {
+            color: $base-black-color;
+        }
+    }
+}
+
+.logo {
+    @include text-styles(24px, 29.26px, 700, $base-black-color);
+}
+
+.icons-menu {
+    @include nav-flex();
+
+    .cart-icon {
+        position: relative;
+
+        .cart-counter {
+            position: absolute;
+            top: 8px;
+            right: -5px;
+            background-color: #FF353A;
+            color: $background-color;
+            border-radius: 50%;
+            width: 13px;
+            height: 13px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 500;
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        nav, .icons-menu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .header {
+        height: 75px;
+    }
+
+}

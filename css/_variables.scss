@@ -1,0 +1,25 @@
+$base-color: #5C6A79;
+$base-black-color: #1C2A39;
+$button-color: #4C3DB2;
+$button-color-disabled: #EEEDF5;
+$slider-color: #EFEEF6;
+$slider-color-active: #9E98DC;
+$background-color: #FFFFFF;
+$star-color: #F2C94C;
+
+@mixin text-styles($size, $line-height, $font-weight, $color: $base-color) {
+    font-size: $size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+    color: $color;
+}
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin nav-flex () {
+    display: flex;
+    gap: 40px;
+}

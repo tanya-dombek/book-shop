@@ -1,0 +1,100 @@
+@import "./variables";
+
+.link {
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 0px 13px 30px -5px rgb(92 106 121 / 42%);
+    cursor: pointer;
+
+    &.first {
+        top: 10%;
+        right: -80px;
+        height: 204px;
+        width: 149px;
+        background-color: $slider-color-active;
+    }
+    &.second {
+        top: 42%;
+        right: -152px;
+        height: 273px;
+        width: 137px;
+        background-color: #FF8FE6;
+    }
+
+    a {
+        @include text-styles(18px, 21.94px, 700, $base-black-color);
+        text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .link {
+        &.first {
+            right: -20px;
+        }
+    
+        &.second {
+            right: -100px;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .link {
+        &.first {
+            right: 20px;
+        }
+    
+        &.second {
+            right: -16px;
+        }
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .link {
+        &.first {
+            height: 140px;
+            width: 110px;
+        }
+    
+        &.second {
+            height: 200px;
+            width: 100px;
+        }
+
+        a {
+            @include text-styles(13px, 15.94px, 700, $base-black-color);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .link {
+        padding: 10px;
+        &.first {
+            height: 80px;
+            width: 78px;
+        }
+    
+        &.second {
+            height: 97px;
+            width: 76px;
+        }
+
+        a {
+            @include text-styles(10px, 12.94px, 700, $base-black-color);
+        }
+    }
+}
+
+
+@media screen and (max-width: 414px) {
+    .link {
+        display: none;
+    }
+}

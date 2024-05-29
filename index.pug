@@ -1,0 +1,66 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet')
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap' rel='stylesheet')
+  title Bookshop
+.layout
+  header.header
+    .nav
+      a.logo(href='#') Bookshop
+      nav
+        ul
+          li
+            a.active(href='#') Books
+          li
+            a(href='#') Audiobooks
+          li
+            a(href='#') Stationery &amp; gifts
+          li
+            a(href='#') Blog
+      .icons-menu
+        a(href='#')
+          img(src='./img/icons/user.svg' alt='user icon')
+        a(href='#')
+          img(src='./img/icons/search.svg' alt='search icon')
+        a.cart-icon(href='#')
+          img(src='./img/icons/shop bag.svg' alt='shop bag icon')
+          span.cart-counter 0
+      img.burger-btn(src='./img/icons/burger-btn.svg' alt='burger button')
+  section.slider
+    .first.link
+      a(href='#')
+        | Change
+        br
+        | old book
+        br
+        | on new
+        br
+        img(src='./img/icons/arrow.svg' alt='arrow')
+    .second.link
+      a(href='#')
+        | Top
+        br
+        | 100
+        br
+        | books
+        br
+        | 2022
+        br
+        img(src='./img/icons/arrow.svg' alt='arrow')
+    img.banner(src='./img/banner.png' alt='banner')
+    ul.rectangles
+      li.active.rec
+      li.rec
+      li.rec
+  content.content
+    .subjects-wrapper
+      ul.subjects
+    section.books-container
+      button.button.load Load more
